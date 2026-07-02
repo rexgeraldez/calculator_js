@@ -8,30 +8,44 @@
 </head>
 <body>
 
-<div class="wrapper">
+    <div class="wrapper">
 
-    <div class="put in">
-        <h1>Sum Calculator</h1>
+        <div class="put_in">
+            <h1>Sum Calculator</h1>
 
-        <label>Enter first number</label>
-        <input type="text" id="num1">
+            <div>
+                <label>Enter first number</label><br>
+                <input type="text" id="num1">
+            </div>
+
+            <br>
+
+            <div>
+                <label>Enter second number</label><br>
+                <input type="text" id="num2">
+            </div>
+
+            <br>
+
+            <div>
+                <label>Enter third number</label><br>
+                <input type="text" id="num3">
+            </div>
+
+            <br>
+
+            <div class="btn">
+                <button onclick="calc()">Calculate Sum</button>
+                <button onclick="clearFields()">Clear</button>
+            </div>
+
+            <p id="ans">Answer is shown here...</p>
+
+        </div>
+
     </div>
 
-    <div>
-        <label>Enter second Number</label>
-        <input type="text" id="num2">
-    </div>
-
-    <div class="btn">
-        <button onclick="calc()">Calculate Sum</button>
-        <button onclick="clearFields()">Clear</button>
-    </div>
-
-    <p id="ans">Answer is shown here...</p>
-
-</div>
-
-<script src="javascripts/scripts.js"></script>
+    <script src="javascripts/scripts.js"></script>
 
 </body>
 </html>

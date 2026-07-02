@@ -1,115 +1,122 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
+    font-family:Segoe UI, Arial, sans-serif;
 
-    background: linear-gradient(
-        -45deg,
-        rgb(2, 6, 23),      /* Almost black blue */
-        rgb(7, 15, 43),     /* Midnight blue */
-        rgb(15, 23, 42),    /* Dark navy */
-        rgb(30, 41, 59),    /* Slate blue */
-        rgb(0, 34, 102),    /* Deep blue */
-        rgb(0, 51, 153),    /* Royal blue */
-        rgb(0, 76, 230),    /* Bright blue */
-        rgb(0, 102, 255),   /* Electric blue */
-        rgb(0, 76, 230),    /* Bright blue */
-        rgb(0, 51, 153),    /* Royal blue */
-        rgb(0, 34, 102),    /* Deep blue */
-        rgb(15, 23, 42),    /* Dark navy */
-        rgb(7, 15, 43),     /* Midnight blue */
-        rgb(2, 6, 23)       /* Almost black blue */
-    );
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-    background-size: 600% 600%;
-    animation: blueGradient 8s ease infinite;
+    min-height:100vh;
+
+    background:linear-gradient(-45deg,#020617,#0f172a,#0b3ea8,#2563eb);
+    background-size:400% 400%;
+    animation:gradient 8s ease infinite;
 }
 
-@keyframes blueGradient{
+@keyframes gradient{
     0%{
-        background-position: 0% 50%;
-    }
-    25%{
-        background-position: 50% 100%;
+        background-position:0% 50%;
     }
     50%{
-        background-position: 100% 50%;
-    }
-    75%{
-        background-position: 50% 0%;
+        background-position:100% 50%;
     }
     100%{
-        background-position: 0% 50%;
+        background-position:0% 50%;
     }
 }
 
-@keyframes blueGradient {
-    0%{
-        background-position: 0% 50%;
-    }
-    50%{
-        background-position: 100% 50%;
-    }
-    100%{
-        background-position: 0% 50%;
-    }
-}
 .wrapper{
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    width:500px;
+    min-height:580px;
 
-    padding: 30px;
-    border-radius: 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding:40px;
 
-    box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.2),
-        inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    background:rgba(255,255,255,.10);
+    backdrop-filter:blur(18px);
 
-    text-align: center;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,.20);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
 }
-label{
-    display: block;
-    margin-bottom: 5px;
-    color: 555;
-}
-.put-in{
-    margin-bottom: 15px;    
-} 
-input[type="text"]{
-    width: calc(100%-22px);
-    border: 1px solid #555;
-    padding: 10px;
-    border-radius: 5px;
-}
-.btn{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-button{
-    padding: 10px 20px;
-    border: none;
-    background-color: rgb(2, 42, 131);
-    color: aliceblue;
-    border-radius: 5px;
-    font-size: 16px;
-}
+
 h1{
-    color: white;
-    text-shadow: 3px 4px 4px black;
+    color:white;
+    margin-bottom:30px;
+    font-size:42px;
 }
-p{
-    color: white;
-    text-shadow: 3px 4px 4px black;
+
+.put_in{
+    width:100%;
 }
+
 label{
-    color: white;
-    text-shadow: 3px 4px 4px black;
+    color:white;
+    display:block;
+    margin-bottom:8px;
+    margin-top:18px;
+    font-size:18px;
+}
+
+input{
+    width:100%;
+    padding:13px;
+
+    border:none;
+    border-radius:8px;
+
+    background:rgba(255,255,255,.15);
+    color:white;
+    font-size:16px;
+    outline:none;
+}
+
+input:focus{
+    border:1px solid #60a5fa;
+    box-shadow:0 0 10px rgba(96,165,250,.5);
+}
+
+.btn{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:30px;
+}
+
+button{
+    padding:12px 24px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#2563eb;
+    color:white;
+
+    cursor:pointer;
+    font-size:16px;
+
+    transition:.3s;
+}
+
+button:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+#ans{
+    margin-top:30px;
+    color:white;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
 }
